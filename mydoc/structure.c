@@ -36,3 +36,9 @@ struct prom_metric_sample {
   char *l_value;           /**< l_value is the full metric name and label set represeted as a string */
   _Atomic double r_value;  /**< r_value is the value of the metric sample */
 };
+
+
+typedef struct prom_metric_formatter {
+  prom_string_builder_t *string_builder;
+  prom_string_builder_t *err_builder;
+} prom_metric_formatter_t;
